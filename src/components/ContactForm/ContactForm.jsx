@@ -6,7 +6,12 @@ import styles from './ContactForm.module.css';
 
 const registerSchema = yup.object().shape({
   name: yup.string().required(),
-  number: yup.string().required().min(8).max(16),
+  number: yup
+    .string()
+    .required()
+    .matches(/^[0-9]+$/, 'Number must contain only digits')
+    .min(8)
+    .max(16),
 });
 
 export function ContactForm({
@@ -57,7 +62,7 @@ export function ContactForm({
           {...register('number')}
           type="tel"
           placeholder="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          pattern="\d{8,16}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         />
         {errors.number && (

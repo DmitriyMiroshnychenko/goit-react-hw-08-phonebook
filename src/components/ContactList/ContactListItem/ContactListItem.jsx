@@ -5,7 +5,7 @@ import { MdDelete, MdEdit, MdPerson, MdPhone } from 'react-icons/md';
 import toast from 'react-hot-toast';
 import styles from './ContactListItem.module.css';
 
-export function ContactListItem({ id, name, phone }) {
+export function ContactListItem({ id, name, number }) {
   const navigate = useNavigate();
   const { deleteContact } = useContacts();
 
@@ -56,5 +56,5 @@ export function ContactListItem({ id, name, phone }) {
 ContactListItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { BiUserPlus, BiLogIn } from 'react-icons/bi';
-import styles from './components/Navigation/Navigation.styled';
+import styles from 'components/Navigation/Navigation.module.css';
 
 export function AuthNav() {
   return (

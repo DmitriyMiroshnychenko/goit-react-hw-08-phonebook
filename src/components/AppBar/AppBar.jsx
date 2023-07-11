@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { AuthNav } from 'components/AuthNav';
 import { UserMenu } from 'components/UserMenu';
 import { IoBook } from 'react-icons/io5';
-import styles from './AppBar.styled';
+import styles from './AppBar.module.css';
 
 export function AppBar() {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);

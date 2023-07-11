@@ -13,6 +13,7 @@ export function UserMenu() {
     dispatch(logOutUser());
     navigate('/');
   }
+
   return (
     <div className={styles.Container}>
       <button

@@ -1,1 +1,1 @@
-export { AppBar } from './AppBar.jsx';
+export { AppBar } from './AppBar';
